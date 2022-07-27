@@ -1,0 +1,2 @@
+import { digitalRoot } from "../solution";
+
