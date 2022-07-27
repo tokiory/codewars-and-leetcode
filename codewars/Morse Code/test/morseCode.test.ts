@@ -1,0 +1,1 @@
+import { decodeMorse } from "../solution";
