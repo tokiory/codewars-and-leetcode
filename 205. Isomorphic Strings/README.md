@@ -25,3 +25,7 @@ Example 3:
 Input: s = "paper", t = "title"
 Output: true
 ```
+
+<div align="center">
+    <h4><a href="https://leetcode.com/problems/isomorphic-strings/">LeetCode</a></h4>
+</div>
