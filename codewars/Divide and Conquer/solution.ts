@@ -3,7 +3,7 @@
  * @param x Array of strings and numbers
  * @returns Sum of numbers - sum of string numbers
  */
-function divCon(x: any[]): number {
+export function divCon(x: any[]): number {
     return x.reduce((acc, item) => {
       if (typeof item === 'number') {
         return acc + item;
@@ -11,5 +11,4 @@ function divCon(x: any[]): number {
         return acc - +item;
       }
     }, 0);
-
 }
