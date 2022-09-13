@@ -18,6 +18,12 @@ describe('First bad version', () => {
     expect(getSolution(BAD_VERSION, LAST_VERSION)).toBe(BAD_VERSION);
   });
 
+  test('When last version is bad', () => {
+    const BAD_VERSION = 2;
+    const LAST_VERSION = 2;
+    expect(getSolution(BAD_VERSION, LAST_VERSION)).toBe(BAD_VERSION);
+  });
+
   test('With not even numbers of last version', () => {
     const BAD_VERSION = 2;
     const LAST_VERSION = 3;

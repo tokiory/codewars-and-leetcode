@@ -7,25 +7,26 @@
 
 export default function (isBadVersion: any) {
   const binarySearch = function (n: number): number {
+
     if (!isBadVersion(n - 1)) {
       return n;
     }
 
-    let half = Math.floor(n / 2);
+    let bottom = 1, up = n;
 
-    while (true) {
+    while (bottom <= up) {
+      const half = Math.floor((bottom + up) / 2);
       if (isBadVersion(half)) {
-        console.log(half, isBadVersion(half), isBadVersion(half - 1));
         if (!isBadVersion(half - 1)) {
-          break;
+          return half;
         }
-        half = Math.floor(half / 2);
+        up = half;
         continue;
       }
-      half = Math.floor((half / 2 < 1 ? half : half / 2) + half);
+      bottom = half;
     }
 
-    return half;
+    return -1;
   };
 
   return binarySearch;
