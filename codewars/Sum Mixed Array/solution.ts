@@ -4,6 +4,6 @@
  * @returns Sum of number and number-strings
  */
 export function sumMix(x: any[]): number {
-    const numberArr = Array.from(x).map(item => +item);
-    return numberArr.reduce((acc, item) => acc + item, 0);
+  const numberArr = Array.from(x).map((item) => +item);
+  return numberArr.reduce((acc, item) => acc + item, 0);
 }

@@ -3,7 +3,7 @@ export function isAValidMessage(message: string): boolean {
 
   // If we don't have any parts and initial length of message isn't equal zero
   if (
-    messageParts?.join("").length !== message.length &&
+    messageParts?.join('').length !== message.length &&
     message.length !== 0
   ) {
     return false;

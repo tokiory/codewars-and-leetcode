@@ -1,8 +1,7 @@
 export class G964 {
   public static digPow = (n: number, p: number) => {
-    
     // Split numbers into string array
-    const digits = String(n).split("");
+    const digits = String(n).split('');
 
     // Sum power of every single digit
     const sum = Array.from(digits).reduce((acc, iter) => {

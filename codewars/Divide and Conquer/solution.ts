@@ -4,11 +4,11 @@
  * @returns Sum of numbers - sum of string numbers
  */
 export function divCon(x: any[]): number {
-    return x.reduce((acc, item) => {
-      if (typeof item === 'number') {
-        return acc + item;
-      } else {
-        return acc - +item;
-      }
-    }, 0);
+  return x.reduce((acc, item) => {
+    if (typeof item === 'number') {
+      return acc + item;
+    } else {
+      return acc - +item;
+    }
+  }, 0);
 }

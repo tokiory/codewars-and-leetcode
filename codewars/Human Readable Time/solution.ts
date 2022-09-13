@@ -13,7 +13,7 @@ export function humanReadable(seconds: number): string {
   // Result time string
   const result = humanReadableTimeArray
     .map((timeString) => appendZero(timeString))
-    .join(":");
+    .join(':');
 
   return result;
 }
@@ -34,7 +34,7 @@ function appendZero(humanReadableDigit: number): string {
   let stringTime = `${humanReadableDigit}`;
 
   if (stringTime.length === 1) {
-    stringTime = "0" + stringTime;
+    stringTime = '0' + stringTime;
   }
 
   return stringTime;

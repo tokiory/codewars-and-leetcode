@@ -1,7 +1,7 @@
 const BRACES_TYPE = {
-  "{": "}",
-  "[": "]",
-  "(": ")"
+  '{': '}',
+  '[': ']',
+  '(': ')',
 };
 
 function getBracesPair(): [string, string][] {
@@ -10,9 +10,8 @@ function getBracesPair(): [string, string][] {
 
 export function validBraces(braces: string): boolean {
   const bracesStack: string[] = [];
-  
-  for (let brace of braces) {
 
+  for (let brace of braces) {
     if (isOpenBrace(brace)) {
       bracesStack.push(brace);
       continue;
@@ -39,7 +38,7 @@ function isOpenBrace(brace: string) {
   const openBraces = Object.keys(BRACES_TYPE);
   let isOpen = false;
 
-  openBraces.forEach(openBrace => {
+  openBraces.forEach((openBrace) => {
     if (brace === openBrace) {
       isOpen = true;
     }

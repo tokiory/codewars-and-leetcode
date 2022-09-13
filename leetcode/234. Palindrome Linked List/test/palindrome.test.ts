@@ -1,13 +1,13 @@
-import { ListNode, isPalindrome } from "../solution";
+import { ListNode, isPalindrome } from '../solution';
 
 function linkedListCreateHelper(n: number): ListNode {
   const numberPhrase = `${n}`;
-  const splittedPhrase = numberPhrase.split("");
+  const splittedPhrase = numberPhrase.split('');
   let resultLinkedList: ListNode | null = null;
   let currentNode = null;
 
   if (/\D/.test(numberPhrase)) {
-    throw new Error("Invalid number, there is letters");
+    throw new Error('Invalid number, there is letters');
   }
 
   for (let digit of splittedPhrase) {
@@ -24,9 +24,8 @@ function linkedListCreateHelper(n: number): ListNode {
   return resultLinkedList as ListNode;
 }
 
-describe("Testing palindrome linked list function", () => {
-
-  test("Testing simple palindrome: 1221", () => {
+describe('Testing palindrome linked list function', () => {
+  test('Testing simple palindrome: 1221', () => {
     const palindromeLinkedList = linkedListCreateHelper(1221);
     expect(isPalindrome(palindromeLinkedList)).toBeTruthy();
   });

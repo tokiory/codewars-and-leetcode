@@ -5,7 +5,7 @@ Write a function which makes a list of strings representing all of the ways you 
 Examples
 
 ```
-balancedParens(0) => [""]
+balancedParens(0) = > [""]
 balancedParens(1) => ["()"]
 balancedParens(2) => ["()()","(())"]
 balancedParens(3) => ["()()()","(())()","()(())","(()())","((()))"]

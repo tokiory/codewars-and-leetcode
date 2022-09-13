@@ -53,9 +53,9 @@ export const MORSE_CODE: MorseLetters = {
   '-.--': 'Y',
   '--..': 'Z',
   '..--.-': '_',
-  '...---...': 'SOS'
-}
+  '...---...': 'SOS',
+};
 
 interface MorseLetters {
-  [letter: string]: string
-};
+  [letter: string]: string;
+}

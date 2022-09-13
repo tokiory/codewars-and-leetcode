@@ -1,33 +1,6 @@
 enum BRACKETS {
-    OPEN = '(',
-    CLOSE = ')'
-};
+  OPEN = '(',
+  CLOSE = ')',
+}
 
-export function balancedParens(n: number): Array<string> {
- 
-    // Проблемы:
-    // 1. Вложенность
-    //    Как определить что внутрь скобки можно что-то вложить
-    
-    // Рассуждение
-    // Допустим, мы будем начинать с самой высокой вложенности (возьмем например 3)
-    // ((())). Затем мы выйдем из скобки. Проверим сколько у нас доступно вложенностей. Будет одна, вложить снова мы не сможем
-    // (()). Однако мы сможем поместить её рядом (()())
-    // ()()(). После этого мы можем разложить их только на первом уровне вложенности.
-    
-    const result: Array<string> = [];
-
-    switch (n) {
-        case 0:
-            return [''];
-        case 1:
-            return [BRACKETS.OPEN + BRACKETS.CLOSE];
-
-        default: {
-            
-        }
-    }
-    
-
-    return result;
-  }
+export function balancedParens(n: number): Array<string> {}

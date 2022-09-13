@@ -1,4 +1,4 @@
-import { MORSE_CODE } from "./preloaded";
+import { MORSE_CODE } from './preloaded';
 
 /**
  * Tranlate from morse code into english
@@ -6,17 +6,15 @@ import { MORSE_CODE } from "./preloaded";
  * @returns Decoded morse string
  */
 export function decodeMorse(morseCode: string): string {
+  // Morse code words
+  const morseCodeWords = splitMorseIntoWords(morseCode);
 
-    // Morse code words
-    const morseCodeWords = splitMorseIntoWords(morseCode);
+  const messageWords = morseCodeWords.map((morseWord) => {
+    return translateMorseWord(morseWord);
+  });
 
-    const messageWords = morseCodeWords.map(morseWord => {
-        return translateMorseWord(morseWord);
-    });
-
-    return messageWords.join(' ').trim();
+  return messageWords.join(' ').trim();
 }
-
 
 /**
  * Split morse code string into array of morse code words
@@ -24,8 +22,10 @@ export function decodeMorse(morseCode: string): string {
  * @returns Array of words in morse code
  */
 function splitMorseIntoWords(morseCode: string): Array<string> {
-    const EXTRA_SPACE_SYMBOL = '_'
-    return morseCode.replace(/\s{2,}/g, EXTRA_SPACE_SYMBOL).split(EXTRA_SPACE_SYMBOL);
+  const EXTRA_SPACE_SYMBOL = '_';
+  return morseCode
+    .replace(/\s{2,}/g, EXTRA_SPACE_SYMBOL)
+    .split(EXTRA_SPACE_SYMBOL);
 }
 
 /**
@@ -34,14 +34,13 @@ function splitMorseIntoWords(morseCode: string): Array<string> {
  * @returns Translated word
  */
 function translateMorseWord(morseCodeWord: string): string {
+  // Letters of morse code
+  const morseLetters = morseCodeWord.split(' ');
 
-    // Letters of morse code
-    const morseLetters = morseCodeWord.split(' ');
+  // Translated letter of the word
+  const translatedLetters = morseLetters.map((letter) => {
+    return MORSE_CODE[letter];
+  });
 
-    // Translated letter of the word
-    const translatedLetters = morseLetters.map(letter => {
-        return MORSE_CODE[letter];
-    });
-
-    return translatedLetters.join('');
+  return translatedLetters.join('');
 }

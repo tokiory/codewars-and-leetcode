@@ -1,6 +1,6 @@
 export function revRot(s: string, sz: number): string {
   if (sz <= 0 || s.length < sz) {
-    return "";
+    return '';
   }
 
   const preparedInput = prepareInput(s, sz);
@@ -11,12 +11,12 @@ export function revRot(s: string, sz: number): string {
     const isCubesSumEven = isChunkCubeEven(chunk);
 
     if (isCubesSumEven) {
-      result.push(chunk.split("").reverse().join(""));
+      result.push(chunk.split('').reverse().join(''));
     } else {
       result.push(chunk.slice(1) + chunk[0]);
     }
   }
-  return result.join("");
+  return result.join('');
 }
 
 function prepareInput(input: string, chunkSize: number): string {
@@ -40,7 +40,7 @@ function createChunks(preparedString: string, chunkSize: number): string[] {
 }
 
 function isChunkCubeEven(chunk: string) {
-  const chunkDigits = chunk.split("").map(Number);
+  const chunkDigits = chunk.split('').map(Number);
   let cubesSum = chunkDigits.reduce((acc, digit) => {
     return acc + Math.pow(digit, 3);
   }, 0);
