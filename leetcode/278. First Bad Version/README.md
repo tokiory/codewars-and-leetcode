@@ -48,3 +48,7 @@ RangeError: Maximum call stack size exceeded
     Line 19: Char 12 in solution.ts (binarySearch)
     Line 19: Char 12 in solution.ts (binarySearch)
 ```
+
+<div align="center">
+    <h4><a href="https://leetcode.com/problems/first-bad-version/">LeetCode</a></h4>
+</div>

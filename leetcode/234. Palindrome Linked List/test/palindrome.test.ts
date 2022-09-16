@@ -1,4 +1,5 @@
-import { ListNode, isPalindrome } from '../solution';
+import { ListNode } from '../../../utils/ListNode';
+import { isPalindrome } from '../solution';
 
 function linkedListCreateHelper(n: number): ListNode {
   const numberPhrase = `${n}`;
