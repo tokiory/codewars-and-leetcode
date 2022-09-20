@@ -1,5 +1,15 @@
-import BinaryTreeNode from "../../utils/BinaryTree";
-export function mergeTrees(root1: BinaryTreeNode | null, root2: BinaryTreeNode | null): BinaryTreeNode | null {
+import TreeNode from "../../utils/BinaryTree";
+export function mergeTrees(firstRoot: TreeNode | null, secondRoot: TreeNode | null): TreeNode | null {
+  if (!firstRoot) {
+    return secondRoot;
+  }
+
+  if (!secondRoot) {
+    return firstRoot;
+  }
   
-  return null;
+  firstRoot.val += secondRoot.val;
+  firstRoot.left = mergeTrees(firstRoot?.left, secondRoot?.left);
+  firstRoot.right = mergeTrees(firstRoot?.right, secondRoot?.right);
+  return firstRoot;
 };

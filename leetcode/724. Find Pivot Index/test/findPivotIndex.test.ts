@@ -1,4 +1,4 @@
-import pivotIndex from '../solutions';
+import pivotIndex from '../old-solutions';
 
 describe('Calculating Pivot Index', () => {
   test('[1,7,3,6,5,6] Array', () => {
