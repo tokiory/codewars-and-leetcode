@@ -6,6 +6,7 @@ export const NOTHING_WORD = 'Nothing';
 export default function likeOrDislike(buttons: ButtonType[]): ButtonType | typeof NOTHING_WORD {
   let isLike = 0;
   let isDislike = 0;
+
   buttons.forEach(item => {
     if (item === DISLIKE_WORD) {
       isLike = 0;
