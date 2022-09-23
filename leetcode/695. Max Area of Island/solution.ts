@@ -94,12 +94,3 @@ function discoverIsland({grid, coordinates, validCell, verifiedCells}: MatrixSea
   }
   return result;
 }
-
-const TEST_MATRIX: Matrix<MatrixCell> = [
-  [1, 1, 0, 0, 0],
-  [1, 1, 0, 0, 0],
-  [0, 0, 0, 1, 1],
-  [0, 0, 0, 1, 1],
-];
-
-console.log(maxAreaOfIsland(TEST_MATRIX));
