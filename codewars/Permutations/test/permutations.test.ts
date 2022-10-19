@@ -1,4 +1,4 @@
-import { permutations } from "../solution";
+import permutations from "../solution";
 
 describe('Testing permutations', () => {
   test('Empty array', () => {
